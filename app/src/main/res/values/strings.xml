@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MateriPakHuda</string>
+
+    <string-array name="spinner_items">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
 </resources>
