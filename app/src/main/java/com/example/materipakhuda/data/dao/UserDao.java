@@ -6,7 +6,7 @@ import androidx.room.Entity;
 import androidx.room.Insert;
 import androidx.room.Query;
 
-import  com.example.materipakhuda.data.model.user;
+import com.example.materipakhuda.data.model.User;
 
 import java.util.List;
 
@@ -15,14 +15,14 @@ import java.util.List;
 public interface UserDao {
 
     @Insert
-    void insert(user user);
+    void insert(User user);
 
-    @Query("SELECT * FROM user WHERE id = :id")
-    user getUserById(int id);
+    @Query("SELECT * FROM User WHERE id = :id")
+    User getUserById(int id);
 
-    @Query("SELECT * FROM user")
-    List<user> getAllUsers();
+    @Query("SELECT * FROM User")
+    List<User> getAllUsers();
 
-    @Query("DELETE FROM user")
+    @Query("DELETE FROM User")
     void deleteAll();
 }

@@ -6,11 +6,11 @@ import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import com.example.materipakhuda.data.dao.UserDao;
-import com.example.materipakhuda.data.model.user;
+import com.example.materipakhuda.data.model.User;
 
 import java.util.concurrent.Executor;
 
-@Database(entities = {user.class}, version = 1, exportSchema = false)
+@Database(entities = {User.class}, version = 1, exportSchema = false)
 public abstract class AppDatabase extends RoomDatabase {
 
     public static Executor databaseWriteExecutor;

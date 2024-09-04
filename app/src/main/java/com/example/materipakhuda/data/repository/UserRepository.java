@@ -4,10 +4,9 @@ package com.example.materipakhuda.data.repository;
 import android.content.Context;
 import com.example.materipakhuda.data.AppDatabase;
 import com.example.materipakhuda.data.dao.UserDao;
-import com.example.materipakhuda.data.model.user;
+import com.example.materipakhuda.data.model.User;
 
 import java.util.List;
-import java.util.concurrent.Executor;
 
 public class UserRepository {
 
@@ -18,15 +17,15 @@ public class UserRepository {
         userDao = db.userDao();
     }
 
-    public void insert(user user) {
+    public void insert(User user) {
         AppDatabase.databaseWriteExecutor.execute(() -> userDao.insert(user));
     }
 
-    public user getUserById(int id) {
+    public User getUserById(int id) {
         return userDao.getUserById(id);
     }
 
-    public List<user> getAllUsers() {
+    public List<User> getAllUsers() {
         return userDao.getAllUsers();
     }
 

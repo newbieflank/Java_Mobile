@@ -41,12 +41,12 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home);
         getSupportActionBar().hide();
         hideSystemUI();
 
-//        userViewModel = new ViewModelProvider(this).get(UserViewModel.class);
+//        userViewModel = new ViewModelProvider(this,new ViewModelProvider.AndroidViewModelFactory(getApplication())).get(UserViewModel.class);
 
         //edit text
         editFullname = findViewById(R.id.edit_Fullname);
@@ -110,7 +110,8 @@ public class HomeActivity extends AppCompatActivity {
 //                user.setPassword(password);
 //                user.setNumber(Integer.parseInt(number));
 //                userViewModel.insert(user);
-                showToast("user:" + username + ", saved successfully");
+                showToast("Welcome " + username + ", your email is" + email + "\n" +
+                        "and your date of birth " + birth);
             } catch (Exception e) {
                 e.printStackTrace();
             }

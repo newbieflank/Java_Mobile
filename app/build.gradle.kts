@@ -32,7 +32,7 @@ android {
 }
 
 dependencies {
-
+    
     implementation("androidx.core:core-ktx:1.10.0")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.9.0")
@@ -41,6 +41,7 @@ dependencies {
 
     // Room dependencies
     implementation("androidx.room:room-runtime:2.5.0")
+    annotationProcessor("androidx.room:room-compiler:2.5.0")
     implementation(libs.firebase.firestore)
 
 
